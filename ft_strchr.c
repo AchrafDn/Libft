@@ -6,7 +6,7 @@
 /*   By: adadoun <adadoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 17:52:00 by adadoun           #+#    #+#             */
-/*   Updated: 2022/10/18 19:03:04 by adadoun          ###   ########.fr       */
+/*   Updated: 2022/10/27 18:58:29 by adadoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,17 +19,11 @@ char	*ft_strchr(const char *s, int c)
 	i = 0;
 	while (s[i])
 	{
-		if (s[i] == (char)c)
+		if (s[i] == (unsigned char)c)
 			return ((char *)(s + i));
 		i++;
 	}
-	if (s[i] == c)
+	if (s[i] == (unsigned char)c)
 		return ((char *)(s + i));
 	return (NULL);
 }
-// int main (void)
-// {
-// 	char str[] = "Rasta ";
-// 	printf("%s", strchr(str, '\0'));
-// 	return(0);
-// }

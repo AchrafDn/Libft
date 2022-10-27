@@ -6,7 +6,7 @@
 /*   By: adadoun <adadoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 01:44:29 by adadoun           #+#    #+#             */
-/*   Updated: 2022/10/20 02:43:21 by adadoun          ###   ########.fr       */
+/*   Updated: 2022/10/27 00:08:40 by adadoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strjoin(const char *s1, const char *s2)
 	size_t	j;
 	char	*p;
 
-	if (!s1 && !s2)
+	if (!s1 || !s2)
 		return (NULL);
 	len = ft_strlen(s1) + ft_strlen(s2);
 	p = (char *)malloc(len + 1);

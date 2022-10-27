@@ -6,7 +6,7 @@
 /*   By: adadoun <adadoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 16:47:25 by adadoun           #+#    #+#             */
-/*   Updated: 2022/10/20 01:00:41 by adadoun          ###   ########.fr       */
+/*   Updated: 2022/10/27 18:01:30 by adadoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void	*p;
 
-	if (count == SIZE_MAX && size == SIZE_MAX)
+	if (size && count >= SIZE_MAX / size)
 		return (0);
 	p = (void *)malloc(count * size);
 	if (!p)

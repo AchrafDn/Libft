@@ -6,7 +6,7 @@
 /*   By: adadoun <adadoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 23:08:24 by adadoun           #+#    #+#             */
-/*   Updated: 2022/10/19 11:36:44 by adadoun          ###   ########.fr       */
+/*   Updated: 2022/10/27 00:16:23 by adadoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,12 +36,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t ds)
 		return (srclen + ds);
 	return (dstlen + srclen);
 }
-// int main(void)
-// {
-// 	char src[] = "";
-// 	char dst[11] = "a";
-// 	printf("%lu\n", ft_strlcat(dst, src, 0));
-// 	printf("src : %s\n", src);
-// 	printf("dst : %s", dst);
-// 	return (0);
-// }

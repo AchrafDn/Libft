@@ -6,76 +6,35 @@
 /*   By: adadoun <adadoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 03:02:23 by adadoun           #+#    #+#             */
-/*   Updated: 2022/10/26 04:46:58 by adadoun          ###   ########.fr       */
+/*   Updated: 2022/10/26 20:25:42 by adadoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
-
-static size_t	geti(char const	*s1, char const *s2)
+char	*ft_strtrim(const char *s, const char *set)
 {
 	size_t	i;
 	size_t	j;
-	int	k;
+	char	*p;
 
 	i = 0;
-	while(s1[i])
-	{
+	if (!s || !set)
+		return (NULL);
+	while(s[i] && ft_strchr(set, s[i]))
+		s++;
+	if (ft_strlen(s) > 0)
+		j = ft_strlen(s) - 1;
+	else 
 		j = 0;
-		k = 0;
-		while (s2[j])
-		{
-			if(s1[i] == s2[j])
-				k = 1;
-			j++;
-		}
-		if (k != 0)
-			i++;
-		else
-			return (i);
-	}
-	return (i);
+	while(s[j] && ft_strchr(set, s[j]))
+		j--;
+	p = ft_substr(s, i, j + 1);
+	return (p);
 }
 
-static size_t	getj(char const	*s1, char const *s2)
-{
-	size_t	i;
-	size_t	j;
-	int	k;
-
-	i = ft_strlen(s1) - 1;
-	while(s1[i])
-	{
-		j = 0;
-		k = 0;
-		while (s2[j])
-		{
-			if(s1[i] == s2[j])
-				k = 1;
-			j++;
-		}
-		if (k != 0)
-			i--;
-		else
-			return (i);
-	}
-	return (i);
-}
-int main ()
-{
-	char str[] = "  -- X  +Achraf++*";
-	prirntf ("--> %i\n--> %i", geti(str, " -!+*") ,getj(str, " -!+*"));
-}
-// char	*ft_strtrim(const char *s1, const char *s2)
+// int main ()
 // {
-// 	int	i;
-// 	int	j;
-	
-// 	j = 0;
-// 	i = 0;
-// 	if (!s1)
-// 		return (NULL);
-// 	// if (s2 = NULL || ft_strlen(s2) = 0)
-// 	// 	return(ft_substr(s1, i, ft_strlen(s2)));
-	
+// 	char str[] = "A++++++";
+// 	char s[] = "+*/- ";
+// 	printf("|%s|", ft_strtrim(str,s));
 // }
