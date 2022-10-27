@@ -6,7 +6,7 @@
 /*   By: adadoun <adadoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 00:54:05 by adadoun           #+#    #+#             */
-/*   Updated: 2022/10/27 18:28:53 by adadoun          ###   ########.fr       */
+/*   Updated: 2022/10/27 23:42:19 by adadoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,8 +75,3 @@ char	*ft_itoa(int c)
 		return (NULL);
 	return (ft_res(p, c));
 }
-
-// int main()
-// {
-// 	printf("%s", ft_itoa(0));
-// }

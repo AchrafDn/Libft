@@ -6,7 +6,7 @@
 /*   By: adadoun <adadoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 02:12:31 by adadoun           #+#    #+#             */
-/*   Updated: 2022/10/27 18:53:39 by adadoun          ###   ########.fr       */
+/*   Updated: 2022/10/27 23:38:38 by adadoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,14 +53,12 @@ static void	ft_free(char **s)
 	s = NULL;
 }
 
-static char	**ft_res(char **ptr, char *s, char c)
+static char	**ft_res(char **ptr, char *s, char c, int k)
 {
 	size_t	j;
 	size_t	i;
-	int		k;
 
 	i = 0;
-	k = 0;
 	while (s[i])
 	{
 		j = 0;
@@ -95,5 +93,5 @@ char	**ft_split(const char *s, char c)
 	ptr = malloc(sizeof(char *) * (nb + 1));
 	if (!ptr)
 		return (NULL);
-	return (ft_res(ptr, (char *)s, c));
+	return (ft_res(ptr, (char *)s, c, 0));
 }

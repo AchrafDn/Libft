@@ -6,11 +6,12 @@
 /*   By: adadoun <adadoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 03:02:23 by adadoun           #+#    #+#             */
-/*   Updated: 2022/10/26 20:25:42 by adadoun          ###   ########.fr       */
+/*   Updated: 2022/10/27 23:48:28 by adadoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
+
 char	*ft_strtrim(const char *s, const char *set)
 {
 	size_t	i;
@@ -20,21 +21,14 @@ char	*ft_strtrim(const char *s, const char *set)
 	i = 0;
 	if (!s || !set)
 		return (NULL);
-	while(s[i] && ft_strchr(set, s[i]))
+	while (s[i] && ft_strchr(set, s[i]))
 		s++;
 	if (ft_strlen(s) > 0)
 		j = ft_strlen(s) - 1;
-	else 
+	else
 		j = 0;
-	while(s[j] && ft_strchr(set, s[j]))
+	while (s[j] && ft_strchr(set, s[j]))
 		j--;
 	p = ft_substr(s, i, j + 1);
 	return (p);
 }
-
-// int main ()
-// {
-// 	char str[] = "A++++++";
-// 	char s[] = "+*/- ";
-// 	printf("|%s|", ft_strtrim(str,s));
-// }
