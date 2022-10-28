@@ -6,7 +6,7 @@
 /*   By: adadoun <adadoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 12:08:06 by adadoun           #+#    #+#             */
-/*   Updated: 2022/10/27 23:49:05 by adadoun          ###   ########.fr       */
+/*   Updated: 2022/10/28 18:48:51 by adadoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,11 @@
 # include<stddef.h>
 # include<stdio.h>
 # include<stdlib.h>
+# include<unistd.h>
 # include<string.h> //printf
+# include<fcntl.h> 
 
+// part 1
 int		ft_isalnum( int c);
 int		ft_isalpha( int c);
 int		ft_atoi(const char *str);
@@ -42,6 +45,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t ds);
 char	*ft_strdup(const char *s1);
 char	*ft_strnstr(const char *s1, const char *s2, size_t len);
 void	*ft_calloc(size_t count, size_t size);
+
+// part 2
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(const char *s1, const char *s2);
 char	*ft_strtrim(const char *s1, const char *s2);
@@ -49,4 +54,15 @@ char	**ft_split(const char *s, char c);
 char	*ft_itoa(int n);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char *c, int fd);
+void	ft_putendl_fd(char *c, int fd);
+void	ft_putnbr_fd(int n, int fd);
+
+// bonus
+typedef struct	s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
 #endif

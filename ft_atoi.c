@@ -6,7 +6,7 @@
 /*   By: adadoun <adadoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 17:08:00 by adadoun           #+#    #+#             */
-/*   Updated: 2022/10/27 17:35:37 by adadoun          ###   ########.fr       */
+/*   Updated: 2022/10/28 17:29:13 by adadoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_atoi(const char *str)
 {
 	size_t	i;
-	size_t	p;
+	int		p;
 	size_t	m;
 	size_t	res;
 
@@ -35,7 +35,18 @@ int	ft_atoi(const char *str)
 	{
 		m = str[i] - 48;
 		res = (res * 10) + m;
+		if (res > 9223372036854775807 && p > 0)
+			return (-1);
+		else if (res > 9223372036854775807 && p < 0)
+			return (0);
 		i++;
 	}
 	return (res * p);
 }
+
+// int main ()
+// {
+// 	char n[40] = "-99999999999999999999999999";
+// 	printf ("%i", ft_atoi(n));
+// 	printf ("%i", atoi(n));
+// }

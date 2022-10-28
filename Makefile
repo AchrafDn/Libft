@@ -6,7 +6,7 @@
 #    By: adadoun <adadoun@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/08 20:54:32 by adadoun           #+#    #+#              #
-#    Updated: 2022/10/27 17:57:53 by adadoun          ###   ########.fr        #
+#    Updated: 2022/10/28 12:39:06 by adadoun          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,7 +44,11 @@ CFILES = ft_isalnum.c \
 		ft_strmapi.c \
 		ft_striteri.c \
 		ft_itoa.c \
-
+		ft_putchar_fd.c \
+		ft_putstr_fd.c \
+		ft_putendl_fd.c \
+		ft_putnbr_fd.c \
+	
 OBJ = ${CFILES:.c=.o}
 RM = rm -f
 LIBC = ar -rc
