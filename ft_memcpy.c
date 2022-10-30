@@ -6,7 +6,7 @@
 /*   By: adadoun <adadoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 01:10:58 by adadoun           #+#    #+#             */
-/*   Updated: 2022/10/20 01:13:49 by adadoun          ###   ########.fr       */
+/*   Updated: 2022/10/29 13:54:08 by adadoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_memcpy( void *dest, const void *src, size_t size )
 	unsigned char	*des;
 	unsigned char	*s;
 
+	if (dest == src)
+		return (dest);
 	if (!dest && !src)
 		return (NULL);
 	des = (unsigned char *)dest;
@@ -30,10 +32,3 @@ void	*ft_memcpy( void *dest, const void *src, size_t size )
 	}
 	return (dest);
 }
-
-// int main ()
-// {
-// 	char *src = NULL;
-// 	char *dst = NULL;
-// 	printf("%s", ft_memcpy(src, dst, 4));
-// }

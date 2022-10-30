@@ -6,7 +6,7 @@
 /*   By: adadoun <adadoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 23:41:31 by adadoun           #+#    #+#             */
-/*   Updated: 2022/10/28 16:50:31 by adadoun          ###   ########.fr       */
+/*   Updated: 2022/10/29 13:56:08 by adadoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*p;
 	size_t	i;
 	size_t	slen;
-	
+
 	if (!s)
 		return (NULL);
 	slen = ft_strlen(s);

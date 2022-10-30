@@ -6,7 +6,7 @@
 #    By: adadoun <adadoun@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/08 20:54:32 by adadoun           #+#    #+#              #
-#    Updated: 2022/10/28 12:39:06 by adadoun          ###   ########.fr        #
+#    Updated: 2022/10/30 19:56:14 by adadoun          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,11 +47,21 @@ CFILES = ft_isalnum.c \
 		ft_putchar_fd.c \
 		ft_putstr_fd.c \
 		ft_putendl_fd.c \
-		ft_putnbr_fd.c \
+		ft_putnbr_fd.c
+BNS =	ft_lstnew_bonus.c \
+		ft_lstsize_bonus.c \
+		ft_lstadd_front_bonus.c \
+		ft_lstlast_bonus.c \
+		ft_lstadd_back_bonus.c \
+		ft_lstdelone_bonus.c \
+		ft_lstdelone_bonus.c \
+		ft_lstclear_bonus.c \
 	
 OBJ = ${CFILES:.c=.o}
+BNS_OBJ = ${BNS:.c=.o}
+
 RM = rm -f
-LIBC = ar -rc
+LIBC = ar -rcs
 NAME = libft.a  
 
 all : $(NAME)
@@ -63,7 +73,14 @@ ${OBJ} :  $(CFILES)
 	$(CC) $(CFLAGS) -c $?
 	
 clean :
-	$(RM) $(OBJ)
+	$(RM) $(OBJ) $(BNS_OBJ)
 fclean: clean
 	$(RM) $(NAME)
 re: fclean all
+
+bonus: all ${BNS_OBJ}
+	ar -rsc $(NAME) $(BNS_OBJ)
+
+# 	* prevent our program from crashing if there is any folder or \
+file with the name of one of our "rules"
+.PHONY:	all clean fclean re
