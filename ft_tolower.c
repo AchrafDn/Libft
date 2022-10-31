@@ -6,9 +6,11 @@
 /*   By: adadoun <adadoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 17:38:53 by adadoun           #+#    #+#             */
-/*   Updated: 2022/10/10 13:33:30 by adadoun          ###   ########.fr       */
+/*   Updated: 2022/10/31 21:06:04 by adadoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_tolower(int str)
 {

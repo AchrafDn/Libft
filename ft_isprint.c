@@ -6,9 +6,11 @@
 /*   By: adadoun <adadoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 17:19:06 by adadoun           #+#    #+#             */
-/*   Updated: 2022/10/09 14:49:46 by adadoun          ###   ########.fr       */
+/*   Updated: 2022/10/31 21:07:06 by adadoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isprint(int c)
 {

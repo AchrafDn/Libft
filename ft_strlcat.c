@@ -6,7 +6,7 @@
 /*   By: adadoun <adadoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 23:08:24 by adadoun           #+#    #+#             */
-/*   Updated: 2022/10/29 13:57:03 by adadoun          ###   ########.fr       */
+/*   Updated: 2022/10/31 20:39:38 by adadoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t ds)
 	srclen = ft_strlen(src);
 	dstlen = ft_strlen(dst);
 	if (ds == 0)
-		return (srclen);
+		return (ft_strlen(src));
 	x = dstlen;
 	i = 0;
 	while (src[i] && x + i < ds - 1)

@@ -6,11 +6,11 @@
 /*   By: adadoun <adadoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 16:22:47 by adadoun           #+#    #+#             */
-/*   Updated: 2022/10/10 12:52:11 by adadoun          ###   ########.fr       */
+/*   Updated: 2022/10/31 22:03:19 by adadoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *str)
 {

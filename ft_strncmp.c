@@ -6,11 +6,11 @@
 /*   By: adadoun <adadoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 17:56:29 by adadoun           #+#    #+#             */
-/*   Updated: 2022/10/17 22:21:15 by adadoun          ###   ########.fr       */
+/*   Updated: 2022/10/31 21:05:35 by adadoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
+#include "libft.h"
 
 int	ft_strncmp(const char *f, const char *s, size_t n)
 {
@@ -28,10 +28,3 @@ int	ft_strncmp(const char *f, const char *s, size_t n)
 	}
 	return (0);
 }
-
-// int main(void)
-// {
-// 	char st[] = "test\200";
-// 	char s[] = "test\0";
-// 	printf("%i", ft_strncmp(st, s, 6));
-// }

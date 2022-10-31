@@ -6,7 +6,7 @@
 /*   By: adadoun <adadoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 03:02:23 by adadoun           #+#    #+#             */
-/*   Updated: 2022/10/27 23:48:28 by adadoun          ###   ########.fr       */
+/*   Updated: 2022/10/31 23:04:05 by adadoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,6 @@ char	*ft_strtrim(const char *s, const char *set)
 		j = 0;
 	while (s[j] && ft_strchr(set, s[j]))
 		j--;
-	p = ft_substr(s, i, j + 1);
+	p = ft_substr(s, 0, j + 1);
 	return (p);
 }

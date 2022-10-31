@@ -6,11 +6,13 @@
 /*   By: adadoun <adadoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 22:22:39 by adadoun           #+#    #+#             */
-/*   Updated: 2022/10/15 16:59:00 by adadoun          ###   ########.fr       */
+/*   Updated: 2022/10/31 18:19:23 by adadoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum( int c)
+#include "libft.h"
+
+int	ft_isalnum(int c)
 {
 	if ((c <= '9' && c >= '0')
 		|| ((c <= 'z' && c >= 'a')

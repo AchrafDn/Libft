@@ -6,7 +6,7 @@
 #    By: adadoun <adadoun@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/08 20:54:32 by adadoun           #+#    #+#              #
-#    Updated: 2022/10/30 19:56:14 by adadoun          ###   ########.fr        #
+#    Updated: 2022/11/01 00:21:01 by adadoun          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,6 @@ CFILES = ft_isalnum.c \
 		ft_memmove.c \
 		ft_memchr.c \
 		ft_memcmp.c \
-		ft_isdigit.c \
 		ft_strrchr.c \
 		ft_strlcpy.c \
 		ft_strlcat.c \
@@ -56,6 +55,7 @@ BNS =	ft_lstnew_bonus.c \
 		ft_lstdelone_bonus.c \
 		ft_lstdelone_bonus.c \
 		ft_lstclear_bonus.c \
+		ft_lstiter_bonus.c \
 	
 OBJ = ${CFILES:.c=.o}
 BNS_OBJ = ${BNS:.c=.o}
@@ -76,11 +76,12 @@ clean :
 	$(RM) $(OBJ) $(BNS_OBJ)
 fclean: clean
 	$(RM) $(NAME)
+
 re: fclean all
 
-bonus: all ${BNS_OBJ}
+bonus: ${BNS_OBJ}
 	ar -rsc $(NAME) $(BNS_OBJ)
 
 # 	* prevent our program from crashing if there is any folder or \
 file with the name of one of our "rules"
-.PHONY:	all clean fclean re
+.PHONY:	all clean fclean re bonus

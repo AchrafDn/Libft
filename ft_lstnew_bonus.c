@@ -6,7 +6,7 @@
 /*   By: adadoun <adadoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 18:32:36 by adadoun           #+#    #+#             */
-/*   Updated: 2022/10/30 19:33:27 by adadoun          ###   ########.fr       */
+/*   Updated: 2022/10/31 20:45:38 by adadoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ t_list	*ft_lstnew(void *content)
 // {
 // 	t_list *head;
 // 	t_list *temp;
-	
 // 	head = ft_lstnew("achraf");
 // 	ft_lstadd_back(&head, ft_lstnew(ft_strdup("1")));
 // 	ft_lstadd_back(&head, ft_lstnew(ft_strdup("2")));

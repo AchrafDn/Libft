@@ -6,7 +6,7 @@
 /*   By: adadoun <adadoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 12:54:27 by adadoun           #+#    #+#             */
-/*   Updated: 2022/10/19 00:28:27 by adadoun          ###   ########.fr       */
+/*   Updated: 2022/10/31 20:38:41 by adadoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t ds)
 	dst[i] = '\0';
 	return (ft_strlen(src));
 }
-
-// int main (void)
-// {
-// 	char src[] = "";
-// 	char dst[] = "Achraf123456";
-
-// 	printf("%lu\n", ft_strlcpy(dst, src, 4));
-// 	printf("ab%s", dst);
-// 	return (0);
-// }
