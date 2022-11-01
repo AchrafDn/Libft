@@ -6,7 +6,7 @@
 /*   By: adadoun <adadoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 19:42:33 by adadoun           #+#    #+#             */
-/*   Updated: 2022/10/31 20:44:42 by adadoun          ###   ########.fr       */
+/*   Updated: 2022/11/01 15:18:28 by adadoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 }
 
 // int main()
-// {
+// {	
 //     t_list  *head;
 //     t_list  *temp;
 //     t_list  *temp2;

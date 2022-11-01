@@ -6,10 +6,9 @@
 #    By: adadoun <adadoun@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/08 20:54:32 by adadoun           #+#    #+#              #
-#    Updated: 2022/11/01 00:21:01 by adadoun          ###   ########.fr        #
+#    Updated: 2022/11/01 14:12:23 by adadoun          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
-
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
@@ -56,32 +55,32 @@ BNS =	ft_lstnew_bonus.c \
 		ft_lstdelone_bonus.c \
 		ft_lstclear_bonus.c \
 		ft_lstiter_bonus.c \
-	
+		ft_lstmap_bonus.c \
+		
 OBJ = ${CFILES:.c=.o}
 BNS_OBJ = ${BNS:.c=.o}
 
 RM = rm -f
-LIBC = ar -rcs
 NAME = libft.a  
 
 all : $(NAME)
 
 $(NAME) : $(OBJ)
-	$(LIBC) $(NAME) $(OBJ)
 
 ${OBJ} :  $(CFILES)
-	$(CC) $(CFLAGS) -c $?
+
+.c.o:
+	$(CC) $(CFLAGS) -c $< -o $@
+	ar -crs $(NAME) $@
+
+bonus: ${OBJ} ${BNS_OBJ}
 	
 clean :
 	$(RM) $(OBJ) $(BNS_OBJ)
+	
 fclean: clean
 	$(RM) $(NAME)
 
 re: fclean all
 
-bonus: ${BNS_OBJ}
-	ar -rsc $(NAME) $(BNS_OBJ)
-
-# 	* prevent our program from crashing if there is any folder or \
-file with the name of one of our "rules"
 .PHONY:	all clean fclean re bonus
